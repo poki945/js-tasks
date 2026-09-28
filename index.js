@@ -48,13 +48,13 @@ class Animal {
 
 class Cat extends Animal  {
     speak() {
-        console.log(this.name + ' говори: Мяу')
+        console.log(this.name + ' говорит: Мяу')
     }
 }
 
 class Dog extends Animal  {
     speak() {
-        console.log(this.name + ' говори: Гав')
+        console.log(this.name + ' говорит: Гав')
     }
 
     fetch() {
@@ -62,11 +62,12 @@ class Dog extends Animal  {
     }
 }
 
-let animal = new Animal
+let animal = new Animal('Животное')
 let cat_one = new Cat('Кот 1')
 let cat_two = new Cat('Кот 2')
 let dog = new Dog('Шобака')
-const array = [cat_one, cat_two, dog]
+
+const array = [animal, cat_one, cat_two, dog]
 
 array.forEach(element => {
     element.speak()
